@@ -1,5 +1,9 @@
-Formulario de creación del empleado
+@extends('layouts.app')
 
-<form action="{{ url('empleado') }}" method="post" enctype="multipart/form-data">
-    @include('empleado.form')
-</form>
+@section('content')
+    <div class="container">
+        <form action="{{ url('empleado') }}" method="post" enctype="multipart/form-data">
+            @include('empleado.form', ['accion' => 'Crear'])
+        </form>
+    </div>
+@endsection
