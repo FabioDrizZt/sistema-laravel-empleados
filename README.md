@@ -1,66 +1,50 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Para inicializar un repositorio clonado de Laravel, sigue estos pasos:
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+1. **Clonar el Repositorio:**
+   Si aún no lo has hecho, clona el repositorio de Laravel desde tu plataforma de alojamiento (como GitHub, GitLab o Bitbucket) o desde una ubicación local. Utiliza el comando `git clone` seguido de la URL del repositorio:
 
-## About Laravel
+   ```bash
+   git clone <URL_del_repositorio>
+   ```
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+2. **Instalar Dependencias:**
+   Una vez que hayas clonado el repositorio, accede al directorio del proyecto y utiliza Composer para instalar las dependencias de Laravel. Ejecuta el siguiente comando:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+   ```bash
+   composer install
+   ```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+3. **Configurar el Archivo de Entorno:**
+   Duplica el archivo `.env.example` y renómbralo como `.env`. Este archivo contiene la configuración específica del entorno de tu aplicación. Configura las variables de entorno en el archivo `.env`, como la conexión a la base de datos, credenciales de correo electrónico, etc.
 
-## Learning Laravel
+   ```bash
+   cp .env.example .env
+   ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+4. **Generar la Clave de Aplicación:**
+   Laravel utiliza una clave de aplicación para cifrar las cookies y otros datos sensibles. Genera una nueva clave de aplicación ejecutando el siguiente comando:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+   ```bash
+   php artisan key:generate
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+5. **Configurar la Base de Datos:**
+   Configura la conexión a la base de datos en el archivo `.env`. Debes proporcionar los detalles de tu base de datos, como el nombre de la base de datos, el usuario y la contraseña.
 
-## Laravel Sponsors
+6. **Ejecutar Migraciones:**
+   Laravel utiliza migraciones para crear y mantener la estructura de la base de datos. Ejecuta las migraciones con el siguiente comando:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+   ```bash
+   php artisan migrate
+   ```
 
-### Premium Partners
+7. **Iniciar el Servidor de Desarrollo:**
+   Para ejecutar la aplicación en un servidor de desarrollo local, utiliza el siguiente comando:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+   ```bash
+   php artisan serve
+   ```
 
-## Contributing
+   Esto iniciará un servidor en `http://localhost:8000` por defecto. Puedes acceder a tu aplicación a través de tu navegador.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+¡Listo! Ahora has inicializado tu repositorio clonado de Laravel y estás listo para comenzar a desarrollar tu aplicación. Recuerda que estos pasos son solo el inicio, y a medida que desarrolles tu proyecto, es posible que necesites realizar más configuraciones y tareas específicas según tus necesidades.
